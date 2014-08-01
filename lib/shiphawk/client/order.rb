@@ -3,8 +3,8 @@ module Shiphawk
     module Order
 
       # Book a shipment
-      def book_shipment(rate_id, options={})
-        post "orders/#{rate_id}/request", options
+      def book_shipment(options={})
+        post "shipments/book", options
       end
 
     end
