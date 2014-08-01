@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.shiphawk.com/api/v1/shipments/subscribe?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: UTF-8
+      string: ! '{"shipment_id":"1007505","callback_url":"http://customer.com/api/shipment_status?api_key=3873"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 01 Aug 2014 15:36:05 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '27'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b807a468-5375-409f-a236-28ff00755956
+      X-Runtime:
+      - '0.005894'
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": "subscribed"}'
+    http_version:
+  recorded_at: Fri, 01 Aug 2014 15:36:04 GMT
+recorded_with: VCR 2.9.2
