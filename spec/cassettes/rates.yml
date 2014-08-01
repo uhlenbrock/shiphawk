@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.shiphawk.com/api/v1/rates?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: UTF-8
+      string: ! '{"items":[{"width":"10","length":"10","height":"10","weight":"10","value":"100","id":"50"},{"width":"10","length":"10","height":"10","weight":"10","value":"100","id":"1380"}],"from_zip":"93105","to_zip":"93117","carriers":["fedex","clearlane"],"rate_filter":"min_rate"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 01 Aug 2014 14:36:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '96'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Etag:
+      - ! '"2233c548c4df5c3aa249574e1ee6549c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 448f0d4f-3000-4bf0-ae7a-45abefb45f67
+      X-Runtime:
+      - '0.030579'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"3836ec569cc95ffbe66a57467f56b7e6","service":"GPX Standard
+        Station-Station","price":31.31}'
+    http_version:
+  recorded_at: Fri, 01 Aug 2014 14:36:30 GMT
+recorded_with: VCR 2.9.2

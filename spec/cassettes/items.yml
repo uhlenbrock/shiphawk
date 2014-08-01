@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.shiphawk.com/api/v1/items/search/table?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 01 Aug 2014 15:00:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1783'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Etag:
+      - ! '"f7f59f4819564bbe17451d4777b7428a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b6fff89b-3303-4c22-8b49-443756ef7304
+      X-Runtime:
+      - '1.426470'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":2071,"name":"Table Lamp w/o bulb","category":"Home and Garden","length":"25.0","height":"12.0","width":"24.0","weight":"29.0","value":"800.0"},{"id":2511,"name":"Table","category":"Sporting
+        Goods","length":"48.0","height":"16.0","width":"36.0","weight":"80.0","value":"400.0"},{"id":1246,"name":"Table","category":"Home
+        and Garden","length":"50.0","height":"24.0","width":"36.0","weight":"100.0","value":"450.0"},{"id":1538,"name":"Tabletop
+        Picture Frame","category":"Home and Garden","length":null,"height":null,"width":null,"weight":null,"value":null},{"id":1868,"name":"Table
+        Runner","category":"Home and Garden","length":"60.0","height":"56.0","width":"24.0","weight":"120.0","value":"600.0"},{"id":1869,"name":"Tablecloth","category":"Home
+        and Garden","length":null,"height":null,"width":null,"weight":null,"value":null},{"id":3019,"name":"Tablecloth","category":"Antiques","length":null,"height":null,"width":null,"weight":null,"value":null},{"id":3020,"name":"Tablet","category":"Computers,
+        Tablets and Networking","length":"14.0","height":"4.0","width":"10.0","weight":"7.0","value":"123.0"},{"id":3021,"name":"Tablet
+        Case","category":"Computers, Tablets and Networking","length":null,"height":null,"width":null,"weight":null,"value":null},{"id":3228,"name":"Tabletop
+        Display","category":"Business and Industrial","length":null,"height":null,"width":null,"weight":null,"value":null},{"id":3497,"name":"Table","category":"Home
+        and Garden","length":"78.0","height":"8.0","width":"38.0","weight":"70.0","value":"400.0"},{"id":131,"name":"Table","category":"Antiques","length":null,"height":null,"width":null,"weight":null,"value":null},{"id":458,"name":"Table
+        ","category":"Sporting Goods","length":"40.0","height":"18.0","width":"34.0","weight":"150.0","value":"450.0"}]'
+    http_version: 
+  recorded_at: Fri, 01 Aug 2014 15:00:46 GMT
+recorded_with: VCR 2.9.2
