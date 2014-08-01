@@ -16,7 +16,7 @@ module Shiphawk
       end
     end unless defined? ENDPOINT
 
-    MIDDLEWARE = Faraday::Builder.new(
+    MIDDLEWARE = Faraday::RackBuilder.new(
       &Proc.new do |builder|
         # Convert request params to json
         builder.use FaradayMiddleware::EncodeJson
