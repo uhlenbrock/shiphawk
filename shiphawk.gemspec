@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rb-inotify'
 
   # Gems
-  s.add_dependency 'hashie', '~> 3.2.0'
+  s.add_dependency 'hashie', '~> 3.3.1'
   s.add_dependency 'faraday', '~> 0.9.0'
   s.add_dependency 'faraday_middleware', '~> 0.9.1'
 

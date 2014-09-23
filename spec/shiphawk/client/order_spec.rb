@@ -12,6 +12,17 @@ describe Shiphawk::Client::Order do
 
   subject do
     data = {
+      rate_id: "3836ec569cc95ffbe66a57467f56b7e6",
+      order_email: "test@test.com",
+      billing_address: {
+        first_name: "Jeff",
+        last_name: "Smith",
+        address_line_1: "123 Cherry Lane",
+        city: "Cincinnati",
+        state: "OH",
+        zipcode: 45202,
+        phone_num: 5135551212
+      },
       origin_address: {
         first_name: "John",
         last_name: "Smith",
@@ -44,12 +55,12 @@ describe Shiphawk::Client::Order do
         }
       ]
     }
-    Shiphawk.book_shipment '3836ec569cc95ffbe66a57467f56b7e6', data
+    Shiphawk.book_shipment data
   end
 
   it 'returns shipment id and bol based on quote id' do
-    assert subject.response.shipment_id
-    assert subject.response.bol
+    subject.response.shipment_id.wont_be_empty
+    subject.response.bol.wont_be_empty
   end
 
 end

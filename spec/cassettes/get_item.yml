@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.shiphawk.com/api/v1/items/2071/details?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 23 Sep 2014 19:11:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '148'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Etag:
+      - ! '"b6efd62057cb64ebfb882d36575bbfdb"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e140563c-8bbf-40f7-aa4f-de87ee6b8fc5
+      X-Runtime:
+      - '0.339377'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":2071,"name":"Table Lamp w/o bulb","category":"Home and Garden","length":"25.0","height":"12.0","width":"24.0","weight":"29.0","value":"800.0"}'
+    http_version:
+  recorded_at: Tue, 23 Sep 2014 19:11:37 GMT
+recorded_with: VCR 2.9.2
