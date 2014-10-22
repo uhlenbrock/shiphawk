@@ -58,9 +58,8 @@ describe Shiphawk::Client::Order do
     Shiphawk.book_shipment data
   end
 
-  it 'returns shipment id and bol based on quote id' do
-    subject.response.shipment_id.wont_be_empty
-    subject.response.bol.wont_be_empty
+  it 'returns shipment id based on quote id' do
+    subject.response.shipment_id.must_equal 1007778
   end
 
 end

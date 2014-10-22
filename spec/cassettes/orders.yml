@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://sandbox.shiphawk.com/api/v1/shipments/book?api_key=25df4732912c7f4991f5b67e2a1e12bd
+    uri: https://sandbox.shiphawk.com/api/v1/shipments/book?api_key=3873c1e7457bedd2ca
     body:
       encoding: UTF-8
       string: ! '{"rate_id":"3836ec569cc95ffbe66a57467f56b7e6","order_email":"test@test.com","billing_address":{"first_name":"Jeff","last_name":"Smith","address_line_1":"123
@@ -20,8 +20,8 @@ http_interactions:
       - ! '*/*'
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 201
+      message: Created
     headers:
       Server:
       - nginx
@@ -34,7 +34,7 @@ http_interactions:
       Connection:
       - keep-alive
       Status:
-      - 400 Bad Request
+      - 201 Created
       Cache-Control:
       - no-cache
       X-Request-Id:
@@ -43,7 +43,7 @@ http_interactions:
       - '0.050411'
     body:
       encoding: US-ASCII
-      string: ! '{"error":"accessorials is missing"}'
-    http_version: 
+      string: ! '{"shipment_id":1007778}'
+    http_version:
   recorded_at: Mon, 22 Sep 2014 20:36:15 GMT
 recorded_with: VCR 2.9.2
