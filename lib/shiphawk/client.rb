@@ -7,11 +7,13 @@ module Shiphawk
     # order to avoid a superclass mismatch error, allowing those modules to be
     # Client-namespaced.
     require 'shiphawk/client/item'
+    require 'shiphawk/client/notification'
     require 'shiphawk/client/order'
     require 'shiphawk/client/rate'
     require 'shiphawk/client/shipment'
 
     include Shiphawk::Client::Item
+    include Shiphawk::Client::Notification
     include Shiphawk::Client::Order
     include Shiphawk::Client::Rate
     include Shiphawk::Client::Shipment

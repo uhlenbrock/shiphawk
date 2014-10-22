@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.shiphawk.com/api/v1/notifications/catalog_sale?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: UTF-8
+      string: ! '{"sale_xid":"14CIN001","start_date":"20141101","end_date":"20141106","pickup_date":"20141108","address_line_1":"address_line_1","address_line_2":"address_line_2","phone_num":"8055551212","city":"Cincinnati","state":"OH","zipcode":45202,"items":[{"name":"item
+        1","category":"category name","item_id":3497,"description":"description","xid":"14CIN10-999","image":"image
+        path 1","height":"10.0","length":"10.0","weight":6.25,"width":"10.0"},{"name":"item
+        2","category":"another category name","item_id":3497,"description":"description","xid":"14-CIN12-999","image":"image
+        path 2","height":"10.0","length":"10.0","weight":6.25,"width":"10.0"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 22 Oct 2014 20:50:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '21'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Etag:
+      - ! '"c4cc506d1cad3e3a3207527a54d4fec8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1164bd4b-a21b-4917-a12d-2d497a087efe
+      X-Runtime:
+      - '0.709795'
+    body:
+      encoding: US-ASCII
+      string: ! '{"catalog_sale_id":3}'
+    http_version:
+  recorded_at: Wed, 22 Oct 2014 20:50:03 GMT
+recorded_with: VCR 2.9.2
