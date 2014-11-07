@@ -11,6 +11,11 @@ module Shiphawk
       request :post, path, options
     end
 
+    # Perform an HTTP PUT request
+    def put(path, options={})
+      request :put, path, options
+    end
+
     private
 
       # Perform an HTTP request
