@@ -4,7 +4,7 @@ module Shiphawk
     private
 
       def connection(options = {})
-        @connection ||= Faraday.new @endpoint, { builder: @middleware }
+        @connection ||= Faraday.new endpoint, { builder: @middleware }
       end
 
   end

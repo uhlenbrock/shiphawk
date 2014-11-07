@@ -24,7 +24,7 @@ module Shiphawk
           connection.params.merge! api_key: credentials[:api_key]
         end
 
-        connection.url_prefix = @endpoint
+        connection.url_prefix = endpoint
         response = connection.send(method) do |request|
           case method.to_sym
           when :get, :delete

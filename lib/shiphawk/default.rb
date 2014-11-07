@@ -8,13 +8,6 @@ module Shiphawk
   module Default
 
     SANDBOX = true unless defined? SANDBOX
-    ENDPOINT = begin
-      if SANDBOX
-        'https://sandbox.shiphawk.com/api/v1/'
-      else
-        'https://shiphawk.com/api/v1/'
-      end
-    end unless defined? ENDPOINT
 
     MIDDLEWARE = Faraday::RackBuilder.new(
       &Proc.new do |builder|
@@ -43,10 +36,6 @@ module Shiphawk
 
       def api_key
         ENV['SHIPHAWK_API_KEY']
-      end
-
-      def endpoint
-        ENDPOINT
       end
 
       def middleware

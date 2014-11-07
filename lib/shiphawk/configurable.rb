@@ -4,7 +4,7 @@ module Shiphawk
   module Configurable
 
     attr_writer :api_key, :sandbox
-    attr_accessor :endpoint, :middleware
+    attr_accessor :middleware
 
     class << self
 
@@ -12,7 +12,6 @@ module Shiphawk
         @keys ||= [
           :api_key,
           :sandbox,
-          :endpoint,
           :middleware
         ]
       end
@@ -29,7 +28,7 @@ module Shiphawk
     end
 
     def sandbox?
-      sandbox == true
+      @sandbox == true
     end
 
     def reset!
@@ -45,6 +44,15 @@ module Shiphawk
       # @return [Hash]
       def credentials
         { api_key: @api_key }
+      end
+
+      # @return [String]
+      def endpoint
+        if sandbox?
+          'https://sandbox.shiphawk.com/api/v1/'
+        else
+          'https://shiphawk.com/api/v1/'
+        end
       end
 
   end
