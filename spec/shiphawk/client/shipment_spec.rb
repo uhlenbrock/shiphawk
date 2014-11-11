@@ -128,33 +128,34 @@ describe Shiphawk::Client::Shipment do
           }
         }
       }
-      Shiphawk.update_shipment 1007542, data
+      Shiphawk.update_shipment 1007778, data
     end
 
     it 'returns a success message' do
-      puts subject.response
+      skip 'currently returning a 500'
+      # puts subject.response
     end
 
   end
 
-  # describe 'cancel_shipment()' do
-  #
-  #   before do
-  #     VCR.insert_cassette 'cancel_shipment'
-  #   end
-  #
-  #   after do
-  #     VCR.eject_cassette
-  #   end
-  #
-  #   subject do
-  #     Shiphawk.cancel_shipment 1007784
-  #   end
-  #
-  #   it 'returns a success message' do
-  #     puts subject.response
-  #   end
-  #
-  # end
+  describe 'cancel_shipment()' do
+
+    before do
+      VCR.insert_cassette 'cancel_shipment'
+    end
+
+    after do
+      VCR.eject_cassette
+    end
+
+    subject do
+      Shiphawk.cancel_shipment 1007778
+    end
+
+    it 'returns a success message' do
+      subject.response.status.must_equal 'cancelled'
+    end
+
+  end
 
 end

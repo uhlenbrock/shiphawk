@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.shiphawk.com/api/v1/shipments/1007778/cancel?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: UTF-8
+      string: ! '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 11 Nov 2014 21:12:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Etag:
+      - ! '"8c3ef12a38d5cbe0bd695bf31c15f8c2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7b66d0ff-52d4-4adc-882c-e5f20c8c66f8
+      X-Runtime:
+      - '0.210681'
+    body:
+      encoding: US-ASCII
+      string: ! '{"shipment_id":"1007778","status":"cancelled"}'
+    http_version:
+  recorded_at: Tue, 11 Nov 2014 21:12:34 GMT
+recorded_with: VCR 2.9.2

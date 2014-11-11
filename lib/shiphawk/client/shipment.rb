@@ -19,7 +19,7 @@ module Shiphawk
 
       # Cancel shipment
       def cancel_shipment(shipment_id)
-        put "/shipments/#{shipment_id}/cancel"
+        put "shipments/#{shipment_id}/cancel"
       end
 
       # Update a shipment
@@ -27,7 +27,7 @@ module Shiphawk
       # NOTE: If you need to change the City, State or Zip or Location Type for
       # the Destination Address, you should Cancel the shipment and book a new one.
       def update_shipment(shipment_id, options={})
-        put "/shipments/#{shipment_id}", options
+        put "shipments/#{shipment_id}", options
       end
 
     end
