@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://sandbox.shiphawk.com/api/v1/shipments/subscribe?api_key=3873c1e7457bedd2ca
+    uri: https://sandbox.shiphawk.com/api/v1/shipments/1007505/subscribe?api_key=3873c1e7457bedd2ca
     body:
       encoding: UTF-8
-      string: ! '{"shipment_id":"1007505","callback_url":"http://customer.com/api/shipment_status?api_key=3873"}'
+      string: ! '{"callback_url":"http://customer.com/api/shipment_status?api_key=3873"}'
     headers:
       User-Agent:
       - Faraday v0.9.0

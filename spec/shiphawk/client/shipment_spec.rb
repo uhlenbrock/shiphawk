@@ -78,10 +78,9 @@ describe Shiphawk::Client::Shipment do
 
     subject do
       data = {
-        shipment_id: "1007505",
         callback_url: "http://customer.com/api/shipment_status?api_key=3873"
       }
-      Shiphawk.track_shipment data
+      Shiphawk.track_shipment "1007505", data
     end
 
     it 'returns a success message' do

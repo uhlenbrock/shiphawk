@@ -3,8 +3,8 @@ module Shiphawk
     module Shipment
 
       # Subscribe to a shipment for tracking
-      def track_shipment(options={})
-        post 'shipments/subscribe', options
+      def track_shipment(shipment_id, options={})
+        post "shipments/#{shipment_id}/subscribe", options
       end
 
       # Get status history for a shipment
