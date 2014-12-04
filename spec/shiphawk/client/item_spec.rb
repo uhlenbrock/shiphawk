@@ -43,4 +43,32 @@ describe Shiphawk::Client::Item do
 
   end
 
+  describe 'suggest_item()' do
+
+    before do
+      VCR.insert_cassette 'suggest_item'
+    end
+
+    after do
+      VCR.eject_cassette
+    end
+
+    subject do
+      data = {
+        name: "A box",
+        width: 10,
+        height: 10,
+        length: 10,
+        value: 100,
+        width: 10
+      }
+      Shiphawk.suggest_item data
+    end
+
+    it 'returns details for a given shiphawk item id' do
+      subject.response.success.must_equal true
+    end
+
+  end
+
 end

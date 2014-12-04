@@ -12,6 +12,12 @@ module Shiphawk
         get "items/#{id}/details"
       end
 
+      # Suggest a ShipHawk item
+      # Requires: name, width, height, length, value, width
+      def suggest_item(options={})
+        post "items/suggest", options
+      end
+
     end
   end
 end

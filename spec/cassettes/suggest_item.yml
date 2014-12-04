@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.shiphawk.com/api/v1/items/suggest?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: UTF-8
+      string: ! '{"name":"A box","width":10,"height":10,"length":10,"value":100}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 04 Dec 2014 19:44:17 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '16'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Etag:
+      - ! '"7363e85fe9edee6f053a4b319588c086"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3ee50612-20f4-4f15-849f-2fcdd3e09e66
+      X-Runtime:
+      - '0.771994'
+    body:
+      encoding: US-ASCII
+      string: ! '{"success":true}'
+    http_version:
+  recorded_at: Thu, 04 Dec 2014 19:44:18 GMT
+recorded_with: VCR 2.9.2
