@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.shiphawk.com/api/v1/shipments/book?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: US-ASCII
+      string: '100'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 15 Dec 2014 14:31:12 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '28'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - c28b7d51-487d-40dc-86a1-3c7686840175
+      X-Runtime:
+      - '0.049418'
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"401 Unauthorized"}'
+    http_version: 
+  recorded_at: Mon, 15 Dec 2014 14:31:14 GMT
+recorded_with: VCR 2.9.2

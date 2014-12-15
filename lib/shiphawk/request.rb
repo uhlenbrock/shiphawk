@@ -36,6 +36,9 @@ module Shiphawk
         end
 
         response.body
+      # It seems like Faraday should have a way to handle this. Oh, well.
+      rescue Faraday::ParsingError
+        raise Error.new("Server Error", "Unable to parse JSON response")
       end
 
   end

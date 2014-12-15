@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.shiphawk.com/api/v1/items/search/table?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: Bad Gateway
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 01 Aug 2014 15:00:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1783'
+      Connection:
+      - keep-alive
+      Status:
+      - 502 Bad Gateway
+      Etag:
+      - ! '"f7f59f4819564bbe17451d4777b7428a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b6fff89b-3303-4c22-8b49-443756ef7304
+      X-Runtime:
+      - '1.426470'
+    body:
+      encoding: US-ASCII
+      string: ! '<html> <head><title>502 Bad Gateway</title></head> <body bgcolor="white"> <center><h1>502 Bad Gateway</h1></center> <hr><center>nginx</center> </body> </html>'
+    http_version:
+  recorded_at: Fri, 01 Aug 2014 15:00:46 GMT
+recorded_with: VCR 2.9.2
