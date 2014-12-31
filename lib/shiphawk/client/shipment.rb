@@ -9,7 +9,7 @@ module Shiphawk
 
       # Get status history for a shipment
       def shipment_status(shipment_id)
-        get 'shipments/tracking/status', { shipment_id: shipment_id }
+        get "shipments/#{shipment_id}/status"
       end
 
       # Book a shipment

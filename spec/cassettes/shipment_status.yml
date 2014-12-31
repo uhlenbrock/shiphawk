@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.shiphawk.com/api/v1/shipments/tracking/status?api_key=3873c1e7457bedd2ca&shipment_id=1007505
+    uri: https://sandbox.shiphawk.com/api/v1/shipments/1007505/status?api_key=3873c1e7457bedd2ca
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
       - Faraday v0.9.0
-      Content-Type:
-      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - ! '*/*'
   response:
@@ -21,26 +21,28 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 23 Sep 2014 18:58:18 GMT
+      - Wed, 31 Dec 2014 14:09:14 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '27'
+      - '64'
       Connection:
       - keep-alive
       Status:
       - 200 OK
+      Etag:
+      - ! '"6995b29a3ed4620cb54f95c629162e34"'
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - eeb49475-daa1-41e1-a952-47d0873ee9ed
+      - 3ad6bfdc-0f23-4ad2-a707-4f8b3d725787
       X-Runtime:
-      - '0.008822'
+      - '0.097769'
     body:
       encoding: US-ASCII
       string: ! '{"shipment_id":"1007505", "status": "ordered", "status_updates": [
         {"timestamp": "2014-07-25T09:07:59.514-07:00", "message": "booked"},
         {"message": "ordered" }]}'
     http_version:
-  recorded_at: Tue, 23 Sep 2014 18:58:20 GMT
+  recorded_at: Wed, 31 Dec 2014 14:09:18 GMT
 recorded_with: VCR 2.9.2
