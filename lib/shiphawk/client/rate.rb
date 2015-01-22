@@ -19,9 +19,14 @@ module Shiphawk
         post 'rates', options.merge(rate_filter: 'fastest')
       end
 
-      # returns simple option for consumers
+      # returns three consumer-friendly options
       def get_consumer_rate(options={})
         post 'rates', options.merge(rate_filter: 'consumer')
+      end
+
+      # returns best rate
+      def get_best_rate(options={})
+        post 'rates', options.merge(rate_filter: 'best')
       end
 
       # returns all rates with cost breakdown
