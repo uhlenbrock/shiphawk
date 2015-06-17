@@ -9,7 +9,7 @@ module Shiphawk
 
       # Update catalog sale
       def update_catalog_sale(sale_xid, options={})
-        put "/catalog_sales/#{sale_xid}/pickup_times", options
+        put "catalog_sales/#{sale_xid}/pickup_times", options
       end
 
     end
