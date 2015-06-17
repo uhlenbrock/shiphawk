@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.shiphawk.com/api/v1/catalog_sales/14CIN001/pickup_times?api_key=3873c1e7457bedd2ca
+    body:
+      encoding: UTF-8
+      string: ! '{"pickup_time":{"start_time":"2015-06-18 10:00:00","end_time":"2015-06-18
+        14:00:00"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Wed, 17 Jun 2015 15:50:21 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '16'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Etag:
+      - ! '"7363e85fe9edee6f053a4b319588c086"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a5e515ee-02d4-4296-ab0e-5d9bba1ab465
+      X-Runtime:
+      - '0.048823'
+    body:
+      encoding: US-ASCII
+      string: ! '{"success":true}'
+    http_version:
+  recorded_at: Wed, 17 Jun 2015 15:50:25 GMT
+recorded_with: VCR 2.9.2
