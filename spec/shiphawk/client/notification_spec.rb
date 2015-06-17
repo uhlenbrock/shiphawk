@@ -86,7 +86,7 @@ describe Shiphawk::Client::Notification do
     end
 
     it 'returns success when updating the pickup times' do
-      subject.response.must_equal :success
+      subject.response.success.must_equal true
     end
 
   end
